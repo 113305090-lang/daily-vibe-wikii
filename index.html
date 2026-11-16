@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daily Vibe & Style Wiki｜個人風格與質感生活知識庫</title>
+  <style>
+    :root {
+      --bg-color: #FAF8F5;
+      --card-bg: #FFFFFF;
+      --border-color: #EAE5DF;
+      --primary: #4A6B82;
+      --primary-light: #EBF1F5;
+      --accent: #D98A7C;
+      --accent-light: #FDF0ED;
+      --text-main: #2D3136;
+      --text-muted: #687078;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+    header {
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .brand {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .brand span {
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 6px;
+    }
+    .nav-tag {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+    .hero {
+      max-width: 960px;
+      margin: 3.5rem auto 2.5rem;
+      padding: 0 1.5rem;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: var(--accent-light);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    .hero h1 {
+      font-size: 2.25rem;
+      line-height: 1.3;
+      margin-bottom: 0.85rem;
+      color: var(--text-main);
+    }
+    .hero p {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 680px;
+    }
+    .section-header {
+      max-width: 960px;
+      margin: 0 auto 1.25rem;
+      padding: 0 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .section-header h2 {
+      font-size: 1.25rem;
+      color: var(--text-main);
+    }
+    .filter-pills {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .pill {
+      border: 1px solid var(--border-color);
+      background: var(--card-bg);
+      color: var(--text-muted);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .pill.active, .pill:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .lessons-grid {
+      max-width: 960px;
+      margin: 0 auto 4rem;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1.5rem;
+    }
+    .lesson-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 1.6rem;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .lesson-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(45, 49, 54, 0.06);
+      border-color: var(--primary);
+    }
+    .card-badge {
+      display: inline-block;
+      background: var(--primary-light);
+      color: var(--primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.2rem 0.65rem;
+      border-radius: 6px;
+      margin-bottom: 0.9rem;
+      width: fit-content;
+    }
+    .card-badge.pink {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+    .lesson-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
+    }
+    .lesson-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--primary);
+      font-weight: 600;
+      border-top: 1px solid var(--border-color);
+      padding-top: 0.9rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">Daily Vibe & Style <span>WIKI</span></div>
+    <div class="nav-tag">Powered by AGENTS.md Workflow</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-badge">✦ 個人風格與生活筆記知識庫</div>
+    <h1>把日常靈感，<br>整理成可翻閱的專屬講義。</h1>
+    <p>這裡收錄我的日常穿搭公式、質感選物清單與高效學習筆記。每一份條目都遵循 <code>AGENTS.md</code> 規範建立，支援章節式互動翻頁閱讀。</p>
+  </section>
+
+  <div class="section-header">
+    <h2>知識庫目錄</h2>
+    <div class="filter-pills">
+      <button class="pill active" onclick="filterCards('all', this)">全部</button>
+      <button class="pill" onclick="filterCards('style', this)">穿搭筆記</button>
+      <button class="pill" onclick="filterCards('life', this)">質感生活</button>
+    </div>
+  </div>
+
+  <main class="lessons-grid" id="grid">
+    <!-- 條目 01 -->
+    <a href="lessons/01-capsule-wardrobe.html" class="lesson-card" data-cat="style">
+      <div>
+        <span class="card-badge">穿搭 · 指南</span>
+        <h3>01｜一週膠囊衣櫥搭配公式</h3>
+        <p>用 10 件高質感基礎單品（寬褲、針織衫、棒球帽與銀飾），輕鬆切換上課、咖啡廳讀書與週末出遊造型。</p>
+      </div>
+      <div class="card-footer">
+        <span>4 個互動章節</span>
+        <span>開始閱讀 →</span>
+      </div>
+    </a>
+
+    <!-- 條目 02 -->
+    <a href="lessons/02-cafe-study-guide.html" class="lesson-card" data-cat="life">
+      <div>
+        <span class="card-badge pink">生活 · 筆記</span>
+        <h3>02｜高效專注與咖啡廳讀書圖鑑</h3>
+        <p>從隨身包包 EDC 必備小物、無咖啡因茶飲選擇，到番茄鐘分段衝刺法，打造最舒適的行動工作室。</p>
+      </div>
+      <div class="card-footer">
+        <span>3 個互動章節</span>
+        <span>開始閱讀 →</span>
+      </div>
+    </a>
+  </main>
+
+  <footer>
+    Daily Vibe & Style Wiki · 依照 AGENTS.md 自動化規範建置與維護
+  </footer>
+
+  <script>
+    function filterCards(category, btn) {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.lesson-card').forEach(card => {
+        if (category === 'all' || card.dataset.cat === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
